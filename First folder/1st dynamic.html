@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<div ng-controller="ctrl">
+    <h1 style="color:red" ng-bind="data+data2+data3"></h1>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+    var app = angular.module("app", []);
+    app.controller("ctrl", ctrl);
+    ctrl.$inject=["$scope"];
+    function ctrl ($scope){
+        $scope.data="hello";
+        $scope.data2="hello2";
+        $scope.data3="hello3";
+
+    }
+</script>
+</html>
